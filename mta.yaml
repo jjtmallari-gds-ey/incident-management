@@ -39,18 +39,18 @@ modules:
 
   - name: incident-management-app-deployer
     type: com.sap.application.content
-    path: gen
+    path: .
     requires:
       - name: incident-management-html5-repo-host
         parameters:
           content-target: true
     build-parameters:
-      build-result: app/
+      build-result: resources/
       requires:
         - name: incidentmanagementincidents
           artifacts:
             - incidents.zip
-          target-path: app/
+          target-path: resources/
 
   - name: incidentmanagementincidents
     type: html5
