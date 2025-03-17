@@ -132,6 +132,7 @@ annotate service.Incidents with {
     status @(
         Common.Label : '{i18n>Status}',
         Common.ValueListWithFixedValues : true,
+        Common.Text : status.descr,
     )
 };
 
@@ -139,6 +140,7 @@ annotate service.Incidents with {
     urgency @(
         Common.Label : '{i18n>Urgency}',
         Common.ValueListWithFixedValues : true,
+        Common.Text : urgency.descr,
     )
 };
 
