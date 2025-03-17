@@ -49,6 +49,7 @@ annotate service.Incidents with @(
             $Type : 'UI.DataField',
             Value : status.descr,
             Label : '{i18n>Status}',
+            Criticality : status.criticality,
         },
         {
             $Type : 'UI.DataField',
