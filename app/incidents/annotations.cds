@@ -37,6 +37,12 @@ annotate service.Incidents with @(
                 },
             ],
         },
+        {
+            $Type : 'UI.ReferenceFacet',
+            Label : '{i18n>Conversation}',
+            ID : 'i18nConversation',
+            Target : 'conversation/@UI.LineItem#i18nConversation',
+        },
     ],
     UI.LineItem : [
         {
@@ -143,4 +149,23 @@ annotate service.Status with {
 annotate service.Urgency with {
     code @Common.Text : descr
 };
+
+annotate service.Incidents.conversation with @(
+    UI.LineItem #i18nConversation : [
+        {
+            $Type : 'UI.DataField',
+            Value : author,
+            Label : '{i18n>Author}',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : message,
+            Label : '{i18n>Date}',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : timestamp,
+        },
+    ]
+);
 
