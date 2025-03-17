@@ -61,6 +61,19 @@ annotate service.Incidents with @(
         status_code,
         urgency_code,
     ],
+    UI.HeaderInfo : {
+        Title : {
+            $Type : 'UI.DataField',
+            Value : title,
+        },
+        TypeName : '',
+        TypeNamePlural : '',
+        Description : {
+            $Type : 'UI.DataField',
+            Value : customer.name,
+        },
+        TypeImageUrl : 'sap-icon://alert',
+    },
 );
 
 annotate service.Incidents with {
